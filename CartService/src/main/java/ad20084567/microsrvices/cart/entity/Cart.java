@@ -24,8 +24,6 @@ public class Cart {
 	@JoinColumn(name = "cart_fk", referencedColumnName = "cartId")
 	private List<LineItem> lineItem;
 	
-	
-	
 	public Cart() {
 		super();
 	}

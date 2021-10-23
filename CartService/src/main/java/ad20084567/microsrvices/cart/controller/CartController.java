@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import ad20084567.microsrvices.cart.entity.Cart;
+import ad20084567.microsrvices.cart.exception.CustomException;
 import ad20084567.microsrvices.cart.services.CartService;
 
 @RestController
@@ -31,18 +32,18 @@ public class CartController {
 	@GetMapping("api/jpa/carts")
 	public List<Cart> getAccounts(){
 		List<Cart> cust = service.searchAllCart();
-//		if(cust.size() ==0) {
-//			throw new CustomException("No Carts to display");
-//		}
+		if(cust.size() ==0) {
+			throw new CustomException("No Carts to display");
+		}
 		return cust;
 	}
 	
 	@GetMapping("/api/jpa/carts/{id}")
 	public Cart getCart(@PathVariable int id) {
 		Cart cust=service.searchCart(id);
-//		if(cust ==null) {
-//			throw new CustomException("id not found");
-//		}
+		if(cust ==null) {
+			throw new CustomException("id not found");
+		}
 	return cust;
 	}
 	
@@ -57,18 +58,18 @@ public class CartController {
 	@PutMapping("/api/jpa/Carts/{id}")
 	public Cart updatedCart(@PathVariable int id,@RequestBody Cart cust) {
 		Cart updatecust=service.updateCart(id, cust);
-//		if(updatecust==null) {
-//			throw new CustomException("id not found");
-//		}
+		if(updatecust==null) {
+			throw new CustomException("id not found");
+		}
 		return updatecust;
 	}
 	
-	@DeleteMapping("api/jpa/customers/{id}")
+	@DeleteMapping("api/jpa/carts/{id}")
 	public Cart deleteCustomer(@PathVariable int id) {
 		Cart deletecust=service.emptyCart(id);
-//		if(deletecust==null) {
-//			throw new CustomException("id not found");
-//			}
+		if(deletecust==null) {
+			throw new CustomException("id not found");
+			}
 		return deletecust;
 	}
 
