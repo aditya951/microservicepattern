@@ -1,10 +1,10 @@
-package com.adi.graphql.resolver.service;
+package com.adi.graphql.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.adi.graphql.resolver.entity.Student;
-import com.adi.graphql.resolver.repository.StudentRepository;
+import com.adi.graphql.entity.Student;
+import com.adi.graphql.repository.StudentRepository;
 
 
 @Service

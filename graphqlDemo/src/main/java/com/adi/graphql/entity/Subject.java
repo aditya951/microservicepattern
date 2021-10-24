@@ -1,4 +1,4 @@
-package com.adi.graphql.resolver.entity;
+package com.adi.graphql.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

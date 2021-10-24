@@ -1,4 +1,4 @@
-package com.adi.graphql.resolver.model;
+package com.adi.graphql.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

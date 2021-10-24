@@ -1,8 +1,8 @@
-package com.adi.graphql.resolver.response;
+package com.adi.graphql.response;
 
 
 
-import com.adi.graphql.resolver.entity.Subject;
+import com.adi.graphql.entity.Subject;
 
 import lombok.Getter;
 import lombok.Setter;

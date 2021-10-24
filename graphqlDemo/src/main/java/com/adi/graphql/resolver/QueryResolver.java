@@ -1,12 +1,19 @@
 package com.adi.graphql.resolver;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.adi.graphql.resolver.model.SampleRequest;
+import com.adi.graphql.model.SampleRequest;
+import com.adi.graphql.response.StudentResponse;
+import com.adi.graphql.service.StudentService;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
 @Component
 public class QueryResolver implements GraphQLQueryResolver {
+	
+	@Autowired
+	StudentService studentService;
+	
 	
 	public String firstQuery0() {
 		return "firstquery0 from resolver class";
@@ -31,5 +38,9 @@ public class QueryResolver implements GraphQLQueryResolver {
 		return sample.getFirst()+" "+sample.getMiddle()+" "+sample.getLast() ;
 	}
 	  
+	public StudentResponse getStudent(long id) {
+		return new StudentResponse(studentService.getStudentById(id));
+	}
+	
 	
 }

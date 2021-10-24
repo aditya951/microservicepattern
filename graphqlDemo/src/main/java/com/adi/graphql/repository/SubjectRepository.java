@@ -1,9 +1,9 @@
-package com.adi.graphql.resolver.repository;
+package com.adi.graphql.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.adi.graphql.resolver.entity.Subject;
+import com.adi.graphql.entity.Subject;
 
 
 

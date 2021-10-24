@@ -1,10 +1,10 @@
-package com.adi.graphql.resolver.response;
+package com.adi.graphql.response;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.adi.graphql.resolver.entity.Student;
-import com.adi.graphql.resolver.entity.Subject;
+import com.adi.graphql.entity.Student;
+import com.adi.graphql.entity.Subject;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -36,12 +36,12 @@ public class StudentResponse {
 		this.street = student.getAddress().getStreet();
 		this.city = student.getAddress().getCity();
 		
-		if (student.getLearningSubjects() != null) {
+	/*	if (student.getLearningSubjects() != null) {
 			learningSubjects = new ArrayList<SubjectResponse>();
 			for (Subject subject: student.getLearningSubjects()) {
 				learningSubjects.add(new SubjectResponse(subject));
 			}
-		}
+		}*/
 	}
 
 	public long getId() {
