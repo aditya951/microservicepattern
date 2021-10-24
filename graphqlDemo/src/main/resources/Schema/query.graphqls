@@ -1,0 +1,17 @@
+type Query{
+	firstQuery0:String
+	firstQuery1:String
+	firstQuery2:String
+	firstQuery3:String
+	fullName(firstn:String,lastn:String):String
+	
+	fullName(sampleRequest:SampleRequest):String
+	
+}
+
+input SampleRequest{
+	first:String!
+	middle:String
+	last:String!
+
+}
