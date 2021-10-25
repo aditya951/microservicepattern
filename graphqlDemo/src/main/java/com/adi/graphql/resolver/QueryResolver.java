@@ -3,7 +3,7 @@ package com.adi.graphql.resolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.adi.graphql.model.SampleRequest;
+import com.adi.graphql.request.SampleRequest;
 import com.adi.graphql.response.StudentResponse;
 import com.adi.graphql.service.StudentService;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;

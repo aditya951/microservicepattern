@@ -1,10 +1,8 @@
 package com.adi.graphql.response;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.adi.graphql.entity.Student;
-import com.adi.graphql.entity.Subject;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -27,7 +25,13 @@ public class StudentResponse {
 	
 	private List<SubjectResponse> learningSubjects;
 	
+	//this is for internal pls do not put in schema
+	private Student student;
+	
+	private String fullName;
+	
 	public StudentResponse (Student student) {
+		this.student=student;
 		this.id = student.getId();
 		this.firstName = student.getFirstName();
 		this.lastName = student.getLastName();
@@ -56,6 +60,16 @@ public class StudentResponse {
 		return firstName;
 	}
 
+	
+	
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -70,6 +84,14 @@ public class StudentResponse {
 
 	public String getEmail() {
 		return email;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public void setEmail(String email) {
