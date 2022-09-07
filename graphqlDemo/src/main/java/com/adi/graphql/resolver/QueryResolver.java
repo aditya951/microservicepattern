@@ -29,10 +29,9 @@ public class QueryResolver implements GraphQLQueryResolver {
 		return "firstquery3 from resolver class";
 	}
 	
-	public String fullName(String first,String last) {
+	public String fullName1(String first,String last) {
 		return first+" "+last ;
 	}
-	
 	
 	public String fullName(SampleRequest sample) {
 		return sample.getFirst()+" "+sample.getMiddle()+" "+sample.getLast() ;

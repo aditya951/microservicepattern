@@ -3,7 +3,7 @@ type Query{
 	firstQuery1:String
 	firstQuery2:String
 	firstQuery3:String
-	fullName(firstn:String,lastn:String):String
+	fullName1(firstn:String,lastn:String):String
 	
 	fullName(sampleRequest:SampleRequest):String
 	
@@ -45,13 +45,3 @@ enum SubjectNameFilter{
     MySQL,
     MongoDB
 }
-
-
-
-
-
-
-
-
-
-
