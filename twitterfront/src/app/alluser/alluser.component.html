@@ -1,0 +1,32 @@
+<p>alluser works!</p>
+<span>All TWEET</span>
+<button class="btnn" (click)="alltweet()">ALL TWEET</button>
+<br />
+<div class="container">
+  <table class="table-light table-hover">
+    <thead>
+      <tr>
+        <td>userid</td>
+        <td>firstname</td>
+        <td>lastname</td>
+        <td>email</td>
+        <td>contactno.</td>
+        <td>password</td>
+        <td>username</td>
+        <td>profileimage</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="adi" *ngFor="let c of user">
+        <td>{{ c.id }}</td>
+        <td>{{ c.firstName }}</td>
+        <td>{{ c.lastName }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.contactNo }}</td>
+        <td>{{ c.password }}</td>
+        <td>{{ c.username }}</td>
+        <td>{{ c.profileImage }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

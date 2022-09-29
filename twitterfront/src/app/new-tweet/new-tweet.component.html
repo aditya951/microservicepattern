@@ -1,0 +1,80 @@
+<p>new-tweet works!</p>
+
+<div id="full">
+  <h2>Create new company</h2>
+  <!-- <div class="container"> -->
+  <div id="error">{{ error }}</div>
+  <form
+    (ngSubmit)="!createForm.invalid && createCompany()"
+    #createForm="ngForm"
+  >
+    <div class="mb-3">
+      <fieldset>
+        <label class="form-label">userId </label>
+        <input
+          [(ngModel)]="company.userId"
+          type="text"
+          name="userid"
+          placeholder="userid"
+          required="required"
+          class="form-control"
+        />
+      </fieldset>
+
+      <fieldset>
+        <label class="form-label">user name </label>
+        <input
+          [(ngModel)]="company.name"
+          type="text"
+          name="name"
+          placeholder="name"
+          required
+          class="form-control"
+        />
+      </fieldset>
+
+      <fieldset>
+        <label class="form-label">likes </label>
+        <input
+          [(ngModel)]="company.likes"
+          type="text"
+          name="likes"
+          required="required"
+          placeholder="should be greater than 10cr"
+          class="form-control"
+        />
+        <small *ngIf="turnover"> shold be greater than 10 cr</small>
+      </fieldset>
+
+      <fieldset>
+        <label class="form-label">message </label>
+        <input
+          [(ngModel)]="company.message"
+          type="text"
+          name="companyWebsite"
+          required="required"
+          placeholder="company Website"
+          class="form-control"
+        />
+      </fieldset>
+
+      <fieldset>
+        <label class="form-label">tag </label>
+        <input
+          [(ngModel)]="company.tag[0]"
+          type="text"
+          name="stockExchangeName"
+          required
+          placeholder="Stock Exchange Name"
+          class="form-control"
+        />
+      </fieldset>
+      <br />
+      <button class="btn btn-primary" type="submit">Add tweet</button>
+    </div>
+  </form>
+  <!-- </div> -->
+
+  <br />
+  <!-- {{ company.companyWebsite }} -->
+</div>

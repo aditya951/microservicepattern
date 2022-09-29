@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css);
+body {
+  background-color: rgb(245, 248, 233);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+body {
+  background-image: url("./assets/8.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}

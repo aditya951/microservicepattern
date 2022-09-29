@@ -1,0 +1,69 @@
+td {
+    padding: 5px;
+    font-size: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+  }
+  th {
+    text-align: center;
+    background-color: transparent;
+  }
+  table {
+    margin-bottom: 60px;
+    padding-bottom: 50px;
+    background: transparent;
+    width: 100%;
+  }
+  .search-container {
+    float: right;
+  }
+  .container {
+    margin-bottom: 50px;
+  }
+  .searchbar {
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  .btnn {
+    background-color: rgb(142, 178, 226);
+    border: 1px solid;
+    border-radius: 15px;
+  }
+  span {
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: large;
+  }
+  .delete {
+    border: none;
+    background-color: transparent;
+  }
+  .topi {
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px;
+    justify-content: center;
+    background-color: transparent;
+    color: aliceblue;
+    font-weight: 200;
+  }
+  .bto {
+    background-color: transparent;
+    border: none;
+  }
+  
+  a {
+    color: rgb(87, 15, 15);
+    text-decoration: underline;
+  }
+  .btnnarrow {
+    background-color: transparent;
+    border: none;
+  }
+  .heart {
+    color: red;
+  }

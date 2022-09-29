@@ -1,0 +1,84 @@
+<p>register works!</p>
+
+<div id="full">
+  <h2>Create new user</h2>
+  <!-- <div class="container"> -->
+  <div id="error">{{ error }}</div>
+  <form (ngSubmit)="!createForm.invalid && register()" #createForm="ngForm">
+    <div class="mb-3">
+      <fieldset>
+        <label class="form-label">username </label>
+        <input
+          [(ngModel)]="user.username"
+          type="text"
+          name="username"
+          placeholder="username"
+          required="required"
+          class="form-control"
+        />
+      </fieldset>
+      <fieldset>
+        <label class="form-label">password </label>
+        <input
+          [(ngModel)]="user.password"
+          type="text"
+          name="password"
+          placeholder="password"
+          required="required"
+          class="form-control"
+        />
+      </fieldset>
+      <fieldset>
+        <label class="form-label">firstName </label>
+        <input
+          [(ngModel)]="user.firstName"
+          type="text"
+          name="firstName"
+          placeholder="firstName"
+          required="required"
+          class="form-control"
+        />
+      </fieldset>
+      <fieldset>
+        <label class="form-label">lastName </label>
+        <input
+          [(ngModel)]="user.lastName"
+          type="text"
+          name="lastName"
+          placeholder="lastName"
+          required="required"
+          class="form-control"
+        />
+      </fieldset>
+      <fieldset>
+        <label class="form-label">email </label>
+        <input
+          [(ngModel)]="user.email"
+          type="text"
+          name="email"
+          placeholder="email"
+          required="required"
+          class="form-control"
+        />
+      </fieldset>
+      <fieldset>
+        <label class="form-label">contactNo </label>
+        <input
+          [(ngModel)]="user.contactNo"
+          type="text"
+          name="contactNo"
+          placeholder="contactNo"
+          required="required"
+          class="form-control"
+        />
+      </fieldset>
+
+      <br />
+      <button class="btn btn-primary" type="submit">Register</button>
+    </div>
+  </form>
+  <!-- </div> -->
+
+  <br />
+  <!-- {{ company.companyWebsite }} -->
+</div>
