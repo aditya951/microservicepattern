@@ -46,6 +46,8 @@ export class LoginComponent implements OnInit {
         console.log(this.user);
         if (this.user.id != null) {
           this.router.navigate(['/twitter', this.user.id]);
+        } else {
+          alert('wrong username and password');
         }
       },
       (error) => this.handleError(error)
@@ -61,5 +63,10 @@ export class LoginComponent implements OnInit {
 
   register() {
     this.router.navigate(['/register']);
+  }
+
+  reset() {
+    console.log('reset clicked');
+    this.router.navigate(['reset']);
   }
 }

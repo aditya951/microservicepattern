@@ -11,6 +11,7 @@
         <td>user name</td>
         <td>messsage</td>
         <td>likes</td>
+        <td>time</td>
         <td>tag</td>
         <td>replies</td>
       </tr>
@@ -22,9 +23,14 @@
         <td>{{ c.name }}</td>
         <td>{{ c.message }}</td>
         <td>{{ c.likes }} <i class="fa fa-heart heart"></i></td>
+        <td>{{ c.localDateTimeCreated }}</td>
         <td>{{ c.tag[0] }}</td>
-        <td>{{ c.replies[0].message }}</td>
 
+        <!-- <td>{{ c.replies[0].message }}</td> -->
+        <div *ngFor="let d of c.replies">
+          <td>{{ d.message }}</td>
+          <td>{{ d.userId }}</td>
+        </div>
         <td>
           <button
             (click)="updateCompany(c.id, c.userId)"
@@ -43,4 +49,30 @@
       </tr>
     </tbody>
   </table>
+</div>
+
+<div id="body1" *ngFor="let c of tweets">
+  <div id="user">{{ c.name }}</div>
+
+  <div id="message">{{ c.message }}</div>
+  <div id="bottom">
+    <div class="bottom1">{{ c.likes }} <i class="fa fa-heart heart"></i></div>
+    <div class="bottom1">{{ c.localDateTimeCreated }}</div>
+    <div class="bottom1">replies</div>
+    <div class="bottom1">
+      <button
+        (click)="updateCompany(c.id, c.userId)"
+        mat-flat-button
+        color="primary"
+        class="bto"
+      >
+        Update
+      </button>
+    </div>
+    <div class="bottom1">
+      <button class="delete bto" (click)="deleteCompany(c.id)">
+        <i class="fa fa-trash iocn"></i>
+      </button>
+    </div>
+  </div>
 </div>

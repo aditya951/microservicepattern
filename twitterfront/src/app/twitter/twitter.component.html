@@ -9,6 +9,10 @@
 <br />
 <span>ALL USER</span>
 <button class="btnn" (click)="alluser()">ALL USER</button>
+<br />
+<span>logout</span>
+
+<button class="btnn" (click)="logout()">Logout</button>
 <div class="container">
   <table class="table-light table-hover">
     <thead>
@@ -19,6 +23,7 @@
         <td>messsage</td>
         <td>likes</td>
         <td>tag</td>
+        <td>time</td>
         <td>replies</td>
       </tr>
     </thead>
@@ -30,23 +35,9 @@
         <td>{{ c.message }}</td>
         <td>{{ c.likes }} <i class="fa fa-heart heart"></i></td>
         <td>{{ c.tag[0] }}</td>
-        <td>{{ c.replies[0].message }}</td>
+        <td>{{ c.localDateTimeCreated }}</td>
+        <!-- <td>{{ c.replies[0].message }}</td> -->
 
-        <td>
-          <button
-            (click)="updateCompany(c.id, c.userId)"
-            mat-flat-button
-            color="primary"
-            class="bto"
-          >
-            Update
-          </button>
-        </td>
-        <td>
-          <button class="delete bto" (click)="deleteCompany(c.id)">
-            <i class="fa fa-trash iocn"></i>
-          </button>
-        </td>
         <td>
           <button
             (click)="reply(c.id, c.userId)"
@@ -60,4 +51,44 @@
       </tr>
     </tbody>
   </table>
+</div>
+
+<div id="body1" *ngFor="let c of tweets">
+  <div id="user">{{ c.name }}</div>
+
+  <div id="message">{{ c.message }}</div>
+  <div id="tag">{{ c.tag[0] }}</div>
+  <div id="bottom">
+    <div class="bottom1">
+      <button
+        (click)="addlike(c.id, c.userId, c)"
+        mat-flat-button
+        color="primary"
+        class="bto"
+      >
+        {{ c.likes }} <i class="fa fa-heart heart"></i>
+      </button>
+    </div>
+    <div class="bottom1">{{ c.localDateTimeCreated }}</div>
+    <div class="bottom1">
+      <button
+        (click)="onetweet(c.id)"
+        mat-flat-button
+        color="primary"
+        class="bto"
+      >
+        replies
+      </button>
+    </div>
+    <div class="bottom1">
+      <button
+        (click)="reply(c.id, c.userId)"
+        mat-flat-button
+        color="primary"
+        class="bto"
+      >
+        reply
+      </button>
+    </div>
+  </div>
 </div>

@@ -1,6 +1,9 @@
 package com.twitter.demo.service;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,10 +33,20 @@ public class TwitterSvc {
 		newTwitterMSG.setUserId(findById.getId());
 		newTwitterMSG.setName(findById.getUsername());
 		newTwitterMSG.setLikes(twitterMsg.getLikes());
+		newTwitterMSG.setLocalDateTimeCreated(time());
 		newTwitterMSG.setTag(twitterMsg.getTag());
 		newTwitterMSG.setReplies(new ArrayList<TwitterMSG>());
 		
-		return twitterRepository.save(newTwitterMSG);
+		TwitterMSG save = twitterRepository.save(newTwitterMSG);
+		return save;
+	}
+
+	private String time() {
+		 LocalDateTime now = LocalDateTime.now();
+		 
+		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");  
+		 String format = dtf.format(now);
+		return format.toString();
 	}
 
 	public TwitterMSG updateTwitter(TwitterMSG updateTwitterMsg, String id) {
@@ -62,7 +75,7 @@ public class TwitterSvc {
 	public Integer updateLikes(TwitterMSG oldTwitterMSG, TwitterMSG updateTwitterMsg) {
 
 		if (updateTwitterMsg.getLikes() != null) {
-			return updateTwitterMsg.getLikes();
+			return updateTwitterMsg.getLikes()+1;
 		}
 
 		return oldTwitterMSG.getLikes();
@@ -87,6 +100,7 @@ public class TwitterSvc {
 
 	public List<TwitterMSG> getAllTweets() {
 		List<TwitterMSG> findAll = twitterRepository.findAll();
+		Collections.reverse(findAll);
 		return findAll;
 	}
 
@@ -97,6 +111,7 @@ public class TwitterSvc {
 
 	public List<TwitterMSG> getAllTweetsOfUser(String userId) {
 		List<TwitterMSG> findByuserId = twitterRepository.findByUserId(userId);
+		Collections.reverse(findByuserId);
 		return findByuserId;
 	}
 

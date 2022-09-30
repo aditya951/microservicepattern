@@ -29,7 +29,7 @@ export class ReplyComponent implements OnInit {
     console.log(this.company);
     this.svc.addReply(this.id, this.userid, this.company).subscribe((data) => {
       console.log(data);
-      this.router.navigate(['twitter']);
+      this.router.navigate(['twitter', this.userid]);
     });
   }
 }

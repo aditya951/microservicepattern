@@ -21,19 +21,10 @@ export class CreateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.company = new Tweet(
-      'hfghfhfghgf',
-      'ghgfhfg',
-      'dfdfdf',
-      44,
-      'hfghfg',
-      'gfgdfdsf',
-      [],
-      []
-    );
+    this.company = new Tweet('', '', '', 0, '', '', [], []);
 
     this.id = this.route.snapshot.params['id'];
-
+    this.userid = this.route.snapshot.params['userid'];
     this.svc.getCompany(this.id).subscribe(
       (data) => {
         this.company = data;
@@ -44,14 +35,11 @@ export class CreateComponent implements OnInit {
   }
 
   updateCompany() {
-    // if (this.company.companyTurnover < 100000000) {
-    //   this.turnover = true;
-    // } else {
     this.svc
       .updateCompany(this.id, this.userid, this.company)
       .subscribe((data) => {
         console.log(data);
-        this.router.navigate(['twitter']);
+        this.router.navigate(['twitter', this.userid]);
       });
     // }
   }

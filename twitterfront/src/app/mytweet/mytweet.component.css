@@ -67,3 +67,40 @@ td {
   .heart {
     color: red;
   }
+
+  #body1{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(201, 201, 212);
+    border-radius: 15px;
+  }
+  #user{
+    
+    padding-left: 10px;
+    margin: 10px;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 15px;
+    width: 50%;
+
+  }
+  #message{
+    
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    font-size: 25px;
+    border-radius: 15px;
+    
+
+  }
+  #bottom{
+    display: inline-flex;
+    padding: 20px;
+  }
+  .bottom1{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
+  }

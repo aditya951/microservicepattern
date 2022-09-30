@@ -13,9 +13,11 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MytweetComponent } from './mytweet/mytweet.component';
 import { AlluserComponent } from './alluser/alluser.component';
+import { OnetweetComponent } from './onetweet/onetweet.component';
+import { ResetComponent } from './reset/reset.component';
 
 @NgModule({
-  declarations: [AppComponent, TwitterComponent, CreateComponent, ReplyComponent, NewTweetComponent, LoginComponent, RegisterComponent, MytweetComponent, AlluserComponent],
+  declarations: [AppComponent, TwitterComponent, CreateComponent, ReplyComponent, NewTweetComponent, LoginComponent, RegisterComponent, MytweetComponent, AlluserComponent, OnetweetComponent, ResetComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

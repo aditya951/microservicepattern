@@ -12,6 +12,7 @@ export class MytweetComponent implements OnInit {
   userid!: string;
   tweets: Tweet[] = [];
   message: string | undefined;
+  replies: Tweet[] = [];
   constructor(
     public sevc: TwitterDataService,
     private route: ActivatedRoute,
@@ -28,6 +29,9 @@ export class MytweetComponent implements OnInit {
       (response) => {
         console.log(response);
         this.tweets = response;
+        this.replies = this.tweets[0].replies;
+        console.log('aditya');
+        console.log(this.replies);
       },
       (error) => this.handleError(error)
     );

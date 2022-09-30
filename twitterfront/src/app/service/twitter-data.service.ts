@@ -71,6 +71,10 @@ export class TwitterDataService {
       user
     );
   }
+  //http://localhost:8080/api/v1.0/tweets/reset
+  reset(login: Login) {
+    return this.http.post(`http://localhost:8080/api/v1.0/tweets/reset`, login);
+  }
   //http://localhost:8080/api/v1.0/tweets/login
   login(company: Login) {
     return this.http.post(

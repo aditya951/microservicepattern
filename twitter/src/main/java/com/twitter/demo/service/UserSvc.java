@@ -47,5 +47,15 @@ public class UserSvc {
 		}
 		return new User();
 	}
+	public User resetuser(Login login) {
+		User findByusername = userRepository.findByUsername(login.getUsername());
+		if (findByusername != null) {
+			findByusername.setPassword(login.getPassword());
+			User save = userRepository.save(findByusername);
+			return save;
+			}
+		
+		return new User();
+	}
 
 }

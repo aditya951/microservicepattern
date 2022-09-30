@@ -1,0 +1,41 @@
+<p>onetweet works!</p>
+
+<span>All TWEET</span>
+<button class="btnn" (click)="alltweet()">ALL TWEET</button>
+<div>
+  <div id="body1">
+    <div id="user">{{ company.name }}</div>
+
+    <div id="message">{{ company.message }}</div>
+    <div id="tag">{{ company.tag[0] }}</div>
+    <div id="bottom">
+      <div class="bottom1">
+        <button
+          (click)="addlike(company.id, company.userId, company)"
+          mat-flat-button
+          color="primary"
+          class="bto"
+        >
+          {{ company.likes }} <i class="fa fa-heart heart"></i>
+        </button>
+      </div>
+      <div class="bottom1">{{ company.localDateTimeCreated }}</div>
+
+      <div class="bottom1">
+        <button
+          (click)="reply(company.id, company.userId)"
+          mat-flat-button
+          color="primary"
+          class="bto"
+        >
+          reply
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="body2" *ngFor="let c of company.replies">
+    <div id="user">{{ c.userId }}</div>
+
+    <div id="message">{{ c.message }}</div>
+  </div>
+</div>

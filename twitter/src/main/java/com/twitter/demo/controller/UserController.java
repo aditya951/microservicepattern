@@ -46,4 +46,10 @@ public class UserController {
 
 		return usersvc.loginuser(login);
 	}
+
+	@PostMapping("/reset")
+	public User resetloginTwitter(@RequestBody Login login) {
+
+		return usersvc.resetuser(login);
+	}
 }

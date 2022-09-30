@@ -1,10 +1,10 @@
-<p>login works!</p>
-<button class="btnn" (click)="register()">register new user</button>
+<p>reset works!</p>
+
 <div id="full">
-  <h2>Login</h2>
+  <h2>reset</h2>
   <!-- <div class="container"> -->
   <div id="error">{{ error }}</div>
-  <form (ngSubmit)="!createForm.invalid && logintwitter()" #createForm="ngForm">
+  <form (ngSubmit)="!createForm.invalid && reset()" #createForm="ngForm">
     <div class="mb-3">
       <fieldset>
         <label class="form-label">username </label>
@@ -17,7 +17,6 @@
           class="form-control"
         />
       </fieldset>
-
       <fieldset>
         <label class="form-label">password </label>
         <input
@@ -25,16 +24,17 @@
           type="text"
           name="password"
           placeholder="password"
-          required
+          required="required"
           class="form-control"
         />
       </fieldset>
+
       <br />
-      <button class="btn btn-primary" type="submit">Login</button>
+      <button class="btn btn-primary" type="submit">Reset</button>
     </div>
   </form>
   <!-- </div> -->
-  <button class="btnn" (click)="reset()">reset password</button>
+
   <br />
   <!-- {{ company.companyWebsite }} -->
 </div>
