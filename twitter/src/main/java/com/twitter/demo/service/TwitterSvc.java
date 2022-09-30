@@ -91,11 +91,9 @@ public class TwitterSvc {
 		newTwitterMSG.setUserId(updateTwitterMsg.getUserId());
 		newTwitterMSG.setName(user.getUsername());
 		newTwitterMSG.setLocalDateTimeCreated(time());
-		newRepliesLst.add(newTwitterMSG);
+		newRepliesLst.add(newTwitterMSG);		
 		oldTwitterMSG.setReplies(newRepliesLst);
 		
-		//oldTwitterMSG.setMessage(newTwitterMsg.getMessage());
-
 		return twitterRepository.save(oldTwitterMSG);
 	}
 
@@ -118,6 +116,9 @@ public class TwitterSvc {
 
 	public TwitterMSG getOneTweetsOfUser(String id) {
 		TwitterMSG oldTwitterMSG = twitterRepository.findById(id).get();
+		
+		List<TwitterMSG> replies = oldTwitterMSG.getReplies();
+		Collections.reverse(replies);
 		return oldTwitterMSG;
 	}
 	
