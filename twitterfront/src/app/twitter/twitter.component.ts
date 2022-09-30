@@ -81,7 +81,8 @@ export class TwitterComponent implements OnInit {
       .subscribe((data) => {
         console.log(data);
         // this.router.navigate(['/twitter', this.userid]);
-        this.router.navigate(['mytweet', this.userid]);
+        this.router.navigate(['/replies', id, this.userid]);
+        //this.router.navigate(['mytweet', this.userid]);
       });
   }
   reply(id: string, userId: string) {

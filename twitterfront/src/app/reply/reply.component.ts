@@ -25,7 +25,7 @@ export class ReplyComponent implements OnInit {
     this.userid = this.route.snapshot.params['userid'];
   }
 
-  addStock() {
+  addreply() {
     console.log(this.company);
     this.svc.addReply(this.id, this.userid, this.company).subscribe((data) => {
       console.log(data);

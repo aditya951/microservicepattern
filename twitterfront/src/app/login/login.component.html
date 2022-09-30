@@ -1,13 +1,12 @@
-<p>login works!</p>
-<button class="btnn" (click)="register()">register new user</button>
 <div id="full">
-  <h2>Login</h2>
+  <h2>Login to twitter</h2>
   <!-- <div class="container"> -->
   <div id="error">{{ error }}</div>
+
   <form (ngSubmit)="!createForm.invalid && logintwitter()" #createForm="ngForm">
     <div class="mb-3">
       <fieldset>
-        <label class="form-label">username </label>
+        <label class="form-label"><strong>USERNAME</strong> </label>
         <input
           [(ngModel)]="login.username"
           type="text"
@@ -19,10 +18,10 @@
       </fieldset>
 
       <fieldset>
-        <label class="form-label">password </label>
+        <label class="form-label"> <strong>PASSWORD</strong> </label>
         <input
           [(ngModel)]="login.password"
-          type="text"
+          type="password"
           name="password"
           placeholder="password"
           required
@@ -30,11 +29,13 @@
         />
       </fieldset>
       <br />
-      <button class="btn btn-primary" type="submit">Login</button>
+      <button class="btn btn-primary btnn" type="submit">Login</button>
     </div>
   </form>
   <!-- </div> -->
-  <button class="btnn" (click)="reset()">reset password</button>
+  <button class="btn btn-primary btnn" (click)="reset()">Reset password</button>
+  <button class="btn btn-primary btnn" (click)="register()">
+    New to Twitter
+  </button>
   <br />
-  <!-- {{ company.companyWebsite }} -->
 </div>

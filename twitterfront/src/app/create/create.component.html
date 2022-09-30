@@ -1,18 +1,19 @@
-<p>create works!</p>
-<h2>Update Company</h2>
-<div class="container">
-  <fieldset>
-    <label>update tweet </label>
-    <input
-      [(ngModel)]="company.message"
-      type="text"
-      name="update tweet"
-      required
-      class="form-control"
-    />
-  </fieldset>
+<div id="full">
+  <h2>Update Company</h2>
+  <div class="container">
+    <fieldset>
+      <label>Update tweet </label>
+      <input
+        [(ngModel)]="company.message"
+        type="text"
+        name="update tweet"
+        required
+        class="form-control"
+      />
+    </fieldset>
 
+    <br />
+    <button class="btn btn-primary btnn" (click)="updateCompany()">save</button>
+  </div>
   <br />
-  <button class="btn btn-success" (click)="updateCompany()">save</button>
 </div>
-<br />

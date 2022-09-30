@@ -39,7 +39,8 @@ export class CreateComponent implements OnInit {
       .updateCompany(this.id, this.userid, this.company)
       .subscribe((data) => {
         console.log(data);
-        this.router.navigate(['twitter', this.userid]);
+        //this.router.navigate(['twitter', this.userid]);
+        this.router.navigate(['mytweet', this.userid]);
       });
     // }
   }

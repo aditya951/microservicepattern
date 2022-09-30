@@ -29,10 +29,10 @@ td {
     border-radius: 10px;
   }
   .btnn {
-    background-color: rgb(142, 178, 226);
-    border: 1px solid;
+    margin-left: 20px;
     border-radius: 15px;
   }
+  
   span {
     margin-right: 10px;
     font-weight: 700;
@@ -52,11 +52,12 @@ td {
     font-weight: 200;
   }
   .bto {
-    background-color: burlywood;
-    border: 2px solid;
-    border-radius: 5px;
+    background-color: transparent;
   }
   
+  button{
+    border: none;
+  }
   a {
     color: rgb(87, 15, 15);
     text-decoration: underline;
@@ -76,41 +77,41 @@ td {
     background-color: rgb(201, 201, 212);
     border-radius: 15px;
   }
-  #user{
-    
+  #user{    
     padding-left: 10px;
-    margin: 10px;
-    background-color: white;
-    font-size: 30px;
-    border-radius: 15px;
+    margin: 10px;    
+    font-size: 20px;    
     width: 50%;
-
   }
-  #message{
-    
-    padding: 20px;
-    margin: 10px;
+  #message{    
+    padding-left: 10px;
+    margin-left: 10px;
     background-color: white;
     font-size: 25px;
-    border-radius: 15px;
-    
-
-  }
+    border-radius: 5px;
+    }
   #bottom{
     display: inline-flex;
-    padding: 20px;
+    padding: 5px;
+    border-radius: 5px;
   }
   .bottom1{
     font-size: 20px;
     margin-left: 10px;
     margin-right: 5px;
+    border: none;
+    border-radius: 5px;
   }
   #tag{
-    background-color: white;
+    
     font-size: 15px;
     border-radius: 5px;
-    margin: 10px;
+    margin-left: 10px;
     font-family: 'Times New Roman', Times, serif;
     padding-left: 5px;
     width: 10%;
+  }
+
+  #nav{
+    display: flex;
   }

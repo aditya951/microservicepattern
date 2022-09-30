@@ -83,13 +83,14 @@ public class TwitterSvc {
 	}
 	
 	public TwitterMSG replyTwitter(TwitterMSG updateTwitterMsg, String id) {
-
+		User user = userRepository.findById(updateTwitterMsg.getUserId()).get();
 		TwitterMSG oldTwitterMSG = twitterRepository.findById(id).get();
 		List<TwitterMSG> newRepliesLst =new ArrayList<>(oldTwitterMSG.getReplies()) ;
 		TwitterMSG newTwitterMSG=new TwitterMSG(); 
 		newTwitterMSG.setMessage(updateTwitterMsg.getMessage());
 		newTwitterMSG.setUserId(updateTwitterMsg.getUserId());
-		
+		newTwitterMSG.setName(user.getUsername());
+		newTwitterMSG.setLocalDateTimeCreated(time());
 		newRepliesLst.add(newTwitterMSG);
 		oldTwitterMSG.setReplies(newRepliesLst);
 		
