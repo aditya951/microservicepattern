@@ -3,7 +3,11 @@
   <button class="btn btn-primary btnn" (click)="alltweet()">ALL TWEET</button>
   <div>
     <div id="body1">
-      <div id="user">{{ company.name }}</div>
+      <div id="user">
+        <img class="image" src="./assets/profile.jpg" alt="Italian Trulli" />{{
+          company.name
+        }}
+      </div>
 
       <div id="message">{{ company.message }}</div>
       <div id="tag">{{ company.tag[0] }}</div>
@@ -15,7 +19,11 @@
       </div>
     </div>
     <div id="body2" *ngFor="let c of company.replies">
-      <div id="user">{{ c.name }}</div>
+      <div id="user">
+        <img class="image" src="./assets/profile.jpg" alt="Italian Trulli" />{{
+          c.name
+        }}
+      </div>
       <div id="message">{{ c.message }}</div>
       <div id="bottom">
         <div class="bottom1">{{ c.localDateTimeCreated }}</div>

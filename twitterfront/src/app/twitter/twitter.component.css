@@ -90,6 +90,10 @@ td {
     font-size: 25px;
     border-radius: 5px;
     }
+    .image{
+      width: 40px;
+      margin-right: 10px;
+    }
   #bottom{
     display: inline-flex;
     padding: 5px;

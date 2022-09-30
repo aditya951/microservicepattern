@@ -12,7 +12,11 @@
   </div>
 </div>
 <div id="body1" *ngFor="let c of tweets">
-  <div id="user">{{ c.name }}</div>
+  <div id="user">
+    <img class="image" src="./assets/profile.jpg" alt="Italian Trulli" />{{
+      c.name
+    }}
+  </div>
 
   <div id="message">{{ c.message }}</div>
   <div id="tag">{{ c.tag[0] }}</div>
