@@ -20,7 +20,7 @@ import com.twitter.demo.service.TwitterSvc;
 
 @RestController
 @RequestMapping("/api/v1.0/tweets")
-@CrossOrigin(origins="http://localhost:4200/")
+@CrossOrigin(origins="*")
 public class TwitterController {
 
 	@Autowired

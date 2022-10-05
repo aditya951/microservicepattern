@@ -44,7 +44,7 @@ public class TwitterSvc {
 	private String time() {
 		 LocalDateTime now = LocalDateTime.now();
 		 
-		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");  
+		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("KK:mm a dd-MMM-yyyy");  
 		 String format = dtf.format(now);
 		return format.toString();
 	}
